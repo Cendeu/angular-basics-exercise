@@ -9,9 +9,13 @@ import { Component } from "@angular/core";
 
 export class ArticleComponent {
 
-  title:String = "This is my title string.";
-  content:String = "This is the string that holds my content. I know, so detailed. Lorem, ipsum, and all that stuff.";
-  isTechRelated:Boolean = true;
+  title:string = "This is my title string.";
+  content:string = "This is the string that holds my content. I know, so detailed. Lorem, ipsum, and all that stuff.";
+  isTechRelated:boolean = true;
+
+  onSwapTechRelated() {
+    this.isTechRelated = !this.isTechRelated;
+  };
 
 
 }
