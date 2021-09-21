@@ -1,13 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="column col-xs-12">
+    <div class="column col-sm-12">
 
-      <h1 [ngStyle] = "{'background-color': isTechRelated ? 'blue' : 'yellow'}">{{ title }}</h1>
+      <h1 style="border-radius: 20px" class="jumbotron mt-3 text-center" [ngStyle] = "{'background-color': isTechRelated ? 'blue' : 'yellow', 'color': isTechRelated ? 'yellow' : 'blue'}">{{ title }}</h1>
+
       <hr>
+
       <p>{{ content }}</p>
-      <hr>
-      <button class="btn btn-primary" (click) ='onSwapTechRelated()'>Swap Title Color</button>
 
+      <hr>
+
+      <button class="btn btn-primary" (click) ='onSwapTechRelated()'>Swap Title Color</button>
       <p *ngIf="isTechRelated; else notTech"> This is tech related.  </p>
       <ng-template #notTech >
         <p>This isn't tech related.</p>
